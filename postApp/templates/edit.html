@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label>Введите заголовок</label><br>
+        <input type="text" name="header" value="{{ post.header }}">
+    </p>
+    <p>
+        <label>Введите текст</label><br>
+        <input type="text" name="content" value="{{ post.content }}">
+    </p>
+    <p>
+        <label>Введите дату</label><br>
+        <input type="date" name="date" value="{{ post.date }}">
+    </p>
+    <input type="submit" value="Сохранить">
+</form>
+</body>
+</html>
